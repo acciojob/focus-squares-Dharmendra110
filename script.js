@@ -6,4 +6,10 @@ squares.forEach((square) => {
       s.style.backgroundColor = s === square ? "#E6E6FA" : "#6F4E37";
     });
   });
+
+  square.addEventListener("mouseout", () => {
+    squares.forEach((s) => {
+      s.style.backgroundColor = ""; // resets to original (or set your default color)
+    });
+  });
 });
